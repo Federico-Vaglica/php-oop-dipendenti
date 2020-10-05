@@ -29,7 +29,7 @@ error_reporting(E_ALL);
         if(empty($this->name) && empty($this->surname)){
             die('Il dipendente non e\' stato registrato ' );
         } 
-        return $this -> name;
+        return $this -> name .' '. $this->surname . ' '.'Anni: '. $this->age;
 
 
 
