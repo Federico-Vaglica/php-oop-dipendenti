@@ -9,7 +9,7 @@ error_reporting(E_ALL);
     private $age;
     private $salary;
 
-    public function __construct($_name,$_surname,$_age,$_salary = 0){
+    public function __construct($_name,$_surname,$_age,$_salary){
         if($_name && $_surname === ''){
             die('inserisci un formato valido ');
         } 

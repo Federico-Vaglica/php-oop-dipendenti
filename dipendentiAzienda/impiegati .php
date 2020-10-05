@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ .'/dipendenti.php';
 
-class Manager extends Dipendenti {
+class Impiegato extends Dipendenti {
     private $ruolo;
     public function __construct($_name,$_surname,$_age,$_salary,$_ruolo){
         parent::__construct($_name,$_surname,$_age,$_salary);
@@ -9,6 +9,5 @@ class Manager extends Dipendenti {
     }
 }
 
-$manager1= new Manager('Mario','rossi','23','200','Manager');
+$manager1= new Impiegato('Mario','rossi','23','200','Impiegato');
 var_dump($manager1);
-?>
