@@ -11,11 +11,11 @@ require_once __DIR__ .'/../traits/getResidenza.php';
     protected $salary;
 
     public function __construct($_name,$_surname,$_age,$_salary){
-        if($_name === '' && $_surname === ''){
+        if($_name === '' || $_surname === ''){
             die('inserisci un formato valido ');
         } 
-        if(!is_numeric($_age) && empty($_age)){
-            die('Devi inserie un formato valido per il salario ');
+        if(!is_numeric($_age) || empty($_age)){
+            die('Devi inserie un formato valido per l eta ');
         }
 
         $this->name = $_name;
