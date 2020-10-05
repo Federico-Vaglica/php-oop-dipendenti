@@ -8,39 +8,44 @@ error_reporting(E_ALL);
     private $surname;
     private $age;
     private $salary;
-    public $repart;
 
-    public function setParamDipendente ($_name,$_surname,$_age){
+    public function __construct($_name,$_surname,$_age,$_salary = 0){
         if($_name && $_surname === ''){
             die('inserisci un formato valido ');
         } 
-
         if(!is_numeric($_age) && empty($_age)){
-            die('Devi inserie un formato valido per l eta');
+            die('Devi inserie un formato valido per il salario ');
         }
 
         $this->name = $_name;
         $this->surname = $_surname;
-        $this->age=$_age;
-        
+        $this->age=$_age;  
+        $this->salary = $_salary;
+
+
     }
+
 
     public function getParamDipendente() {
         if(empty($this->name) && empty($this->surname)){
             die('Il dipendente non e\' stato registrato ' );
         } 
-        return $this -> name .' '. $this->surname . ' '.'Anni: '. $this->age;
+        return $this -> name .' '. $this->surname . ' '.'Anni: '. $this->age ; 
 
 
 
     }
 
+    public function getSalary() {
+        if(empty($this->salary)){
+            die('Il sario deve essere ancora inserito');
+        }
+
+        return $this->salary;
+    }
+
  }
 
- $dipendente1 = new Dipendenti();
- $dipendente1 ->setParamDipendente('Gianni','Mario','24');
- echo $dipendente1 -> getParamDipendente();
- 
 
 
 ?>
