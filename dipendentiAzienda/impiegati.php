@@ -9,5 +9,3 @@ class Impiegato extends Dipendenti {
     }
 }
 
-$impiegato= new Impiegato('Mario','rossi','23','200','Impiegato');
-var_dump($impiegato);

@@ -9,6 +9,5 @@ class Manager extends Dipendenti {
     }
 }
 
-$manager1= new Manager('Mario','rossi','23','200','Manager');
-var_dump($manager1);
+
 ?>
