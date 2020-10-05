@@ -4,10 +4,10 @@ ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
  class Dipendenti {
-    private $name;
-    private $surname;
-    private $age;
-    private $salary;
+    protected $name;
+    protected $surname;
+    protected $age;
+    protected $salary;
 
     public function __construct($_name,$_surname,$_age,$_salary){
         if($_name && $_surname === ''){
