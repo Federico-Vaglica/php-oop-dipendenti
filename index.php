@@ -3,7 +3,7 @@ require_once 'dipendentiAzienda/dipendenti.php';
 require_once 'dipendentiAzienda/manager.php';
 require_once 'dipendentiAzienda/impiegati.php';
 
-$manager1= new Manager('Mario','rossi','23','200','Manager');
+$manager1= new Manager('','rossi','23','200','Manager');
 var_dump($manager1);
 
 
